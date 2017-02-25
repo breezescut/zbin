@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """ Complete the code in ClassifyNB.py with the sklearn
     Naive Bayes classifier to classify the terrain data.
@@ -36,3 +36,7 @@ clf = classify(features_train, labels_train)
 ### draw the decision boundary with the text points overlaid
 prettyPicture(clf, features_test, labels_test)
 output_image("test.png", "png", open("test.png", "rb").read())
+
+
+
+
