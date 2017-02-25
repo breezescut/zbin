@@ -9,3 +9,4 @@ if __name__ == "__main__":
     print(x)
     ss = input("input your name:")
     print("Hello %s" % ss)
+    print("hello_world")
