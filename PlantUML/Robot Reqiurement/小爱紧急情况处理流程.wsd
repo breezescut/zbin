@@ -1,0 +1,10 @@
+
+@startuml
+
+skinparam monochrom true
+
+actor User as User
+
+participant  
+
+@enduml
