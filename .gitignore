@@ -215,5 +215,17 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
+#Git Source
+Git
+
+#GoLang Source
+Golang
+
 #PlantUML
-*.wsd
+PlantUML
+
+#Other
+out
+*.svg
+*.png
+*.jpg
