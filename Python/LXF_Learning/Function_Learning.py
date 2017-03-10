@@ -117,6 +117,35 @@ def test_listcompr():
     L = ['Hello', 'WORLD', 18, 'APple', None]
     print([s.lower() for s in L if isinstance(s, str)])
 
+# 杨辉三角
+def trangle(max = 10):
+    l1 = [1]
+    yield l1
+    l1 = [1, 1]
+    yield l1
+    for i in range(max-2):
+        l1 = [1] + [ l1[n]+l1[n+1] for n in (range(len(l1) - 1)) ] + [1]
+        yield l1
+
+def test_trangle(x=10):
+    t = trangle()
+    for i in t:
+        print(i)
+
+def test_map():
+    def abs_1(x):
+        return abs(x)
+    r = map(abs_1, [-2,-2,-5, 1,3,34,5,-5])
+    print(list(r))
+    s = ['adam', 'LISA', 'barT']
+    
+    print(list(map(lambda x: x[0].upper()+x[1:].lower(), s)))
+
+def test_reduce(*args):
+    from functools import reduce
+    sf = lambda args:  "*".join(list(map(str, args)))
+    sv = sf(args)
+    print(sv+"=", reduce(lambda x, y: x*y, args))
+
 if __name__ == "__main__":
-    test_listcompr()
-    test_listcompr()
+    test_reduce(1,2,3,4,5)
