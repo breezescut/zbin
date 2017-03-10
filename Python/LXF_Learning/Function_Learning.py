@@ -119,3 +119,4 @@ def test_listcompr():
 
 if __name__ == "__main__":
     test_listcompr()
+    test_listcompr()
