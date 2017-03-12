@@ -131,7 +131,7 @@ def test_trangle(x=10):
     t = trangle()
     for i in t:
         print(i)
-
+        
 def test_map():
     def abs_1(x):
         return abs(x)
@@ -147,5 +147,72 @@ def test_reduce(*args):
     sv = sf(args)
     print(sv+"=", reduce(lambda x, y: x*y, args))
 
+
+
+def gen_int():
+    n = 2
+    while True:
+        yield n
+        n=n+1
+
+def gen_odd_list(iter_x, x):
+    print("In gen_odd_list:%d" % x)
+    # 不知为什么这段会导致无限递归以致堆栈溢出,要搞明白这类迭代器的底层实现原理才行
+    # l1 = (n for n in iter_x if n%x!=0 )
+    l1 = iter_x
+    l1 = filter(lambda x: x%n != 0, l1)
+    print("Out gen_odd_list:%d" % x)
+    return l1
+
+def primes():
+    l1 = gen_int()
+    x = next(l1)
+    yield x
+    while True:
+        l1 = gen_odd_list(l1, x)
+        x = next(l1)
+        yield x
+
+def test_primes():
+    iter_1 = primes()
+    for i in range(1000):
+        print(next(iter_1), end=' ')
+
+def _odd_iter():
+    n = 1
+    while True:
+        n = n + 2
+        yield n
+
+def _not_divisible(n):
+    return lambda x: x % n > 0
+
+def primes2():
+    yield 2
+    it = _odd_iter() # 初始序列
+    while True:
+        n = next(it) # 返回序列的第一个数
+        yield n
+        it = filter(_not_divisible(n), it) # 构造新序列
+        
+def test_primes2():
+    iter_1 = primes2()
+    for i in range(10000):
+        print(next(iter_1), end=' ')
+
+def test_sorted():
+    L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+
+    def by_name(t):
+        return t[0].lower()
+    L_byName = sorted(L, key=by_name)
+    print(L_byName)
+
+    def by_score(t):
+        return t[1]
+    L_byScore = sorted(L, key=by_score, reverse=True)
+    print(L_byScore)
+
+
 if __name__ == "__main__":
-    test_reduce(1,2,3,4,5)
+    test_sorted()
