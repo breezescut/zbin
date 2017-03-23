@@ -225,6 +225,7 @@ Golang
 PlantUML
 
 #Other
+Robot
 out
 *.svg
 *.png
