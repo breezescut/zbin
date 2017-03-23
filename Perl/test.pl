@@ -4,7 +4,7 @@ require 'test_config.pl';
 use IO::Socket;
 use JSON;
 use Data::Dumper;
-use IO::Socket::Timeout;
+# use IO::Socket::Timeout;
 use Net::MQTT::Simple;
 use utf8;
 #use utf8::all;

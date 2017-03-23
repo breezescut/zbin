@@ -10,7 +10,7 @@
 
 %mqttconfig = (
         #open door
-        "m1"=>qq|{"devid":"FA113705004B1200","devtype":"26","gwid":"50294D20A98F","msgid":"123","params"[{"contactdetector_alarm":"1","subdevid":"14","subdevtype":"26"}],"reqtype":"update","ts":"1490165886463"}|,
+        "m1"=>qq|{"devid":"FA113705004B1200","devtype":"26","gwid":"50294D20A98F","msgid":"123","params":[{"contactdetector_alarm":"1","subdevid":"14","subdevtype":"26"}],"reqtype":"update","ts":"1490165886463"}|,
         #close door
-        "m2"=>qq|{"devid":"FA113705004B1200","devtype":"26","gwid":"50294D20A98F","msgid":"123","params"[{"contactdetector_alarm":"2","subdevid":"14","subdevtype":"26"}],"reqtype":"update","ts":"1490165886463"}|
+        "m2"=>qq|{"devid":"FA113705004B1200","devtype":"26","gwid":"50294D20A98F","msgid":"123","params":[{"contactdetector_alarm":"0","subdevid":"14","subdevtype":"26"}],"reqtype":"update","ts":"1490165886463"}|
 );
