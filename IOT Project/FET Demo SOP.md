@@ -1,7 +1,7 @@
 # FET Demo SOP
 
 ## 一. 部署环境介绍
-![Alt text](./Photo/FET_Demo_部署1.png)
+![Alt text](https://github.com/breezescut/zbin/blob/master/IOT%20Project/Photo/FET_Demo_%E9%83%A8%E7%BD%B21.png?raw=true)
 
 ## 二. 演示前准备工作
 
