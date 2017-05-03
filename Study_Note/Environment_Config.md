@@ -2,14 +2,16 @@
 仅以此文档记录各类软件安装和配置
 
 ## Visual Studio Code
-### Python 配置
+### Python VSC Config
 - disable python lint
 
-### Golang Config
+### Golang VSC Config
 
-### C/C++ Config
+### C/C++ VSC Config
 - [C++ 扩展](https://blogs.msdn.microsoft.com/c/?p=1072)
 - Clang 工具链比 GCC 工具链优秀, VSC 有Clang 插件, 但尚未安装 Windows 上的 Clang 工具链
+### Git VSC Config
+- 持久化 Github 账号: git config --global credential.helper wincred
 
 ## Golang 环境配置
 - 安装 64 位版本
