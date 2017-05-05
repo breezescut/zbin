@@ -1,11 +1,18 @@
 # Environment Config
 仅以此文档记录各类软件安装和配置
 
-## Visual Studio Code
+## Visual Studio
+2017/5/3 安装完成, 但没有配置, 还不知道怎么用
+
+## Visual Studio Cod
 ### Python VSC Config
 - disable python lint
 
 ### Golang VSC Config
+- 配置 GOPATH 指向 CodeHome 下的 Golang 和 Git 目录
+- 安装 VSC go 插件, go插件会要下载golang 的工具链, 但需要翻墙, 直接拿以前的build好的工具放到 Golang/bin 目录下即可使用
+- 配置 task.json 使支持 python 和 golang 两种任务, 默认任务是python(ctrl+shift+b), 要执行golang 任务需要(ctrl+shift+t)后再选中Golang
+ 
 
 ### C/C++ VSC Config
 - [C++ 扩展](https://blogs.msdn.microsoft.com/c/?p=1072)
