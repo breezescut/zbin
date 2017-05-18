@@ -1,6 +1,10 @@
 # Environment Config
 仅以此文档记录各类软件安装和配置
 
+## JetBrains 各类IDE安装
+下载了 JetBrains 家多个IDE安装, 并通过 [xidea教程](http://bit.ly/2pKqcj0) 全部激活.成功安装激活的 IDE: Gogland, PyCharm, IntelliJ IDEA, WebStorm, DataGrip, CLion
+
+
 ## Visual Studio
 2017/5/3 安装完成, 但没有配置, 还不知道怎么用
 
@@ -29,6 +33,8 @@
 - 安装了 Anaconda 用于支持 Python
 - 默认 Python3, 用 Anaconda 另外装了个 python27 的虚拟环境
 - Ubuntu 上没有安装 Anaconda, 直接用 apt-get 安装了 python3 和 Python(默认2.x) 两种版本
+- conda install pyserial, pyserial 用于串口编程, import serial 启用
+- 为 TensorFlow 新建了一个 "name=tensorflow, python=3.6" 的conda env, 但源中的tensorflow要求 python3.5, env 要重新构建(已清理)
 
 ### [Anaconda 教程](http://www.jianshu.com/p/2f3be7781451)
 - 国内镜像配置

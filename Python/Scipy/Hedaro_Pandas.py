@@ -93,6 +93,20 @@ class TestPandas(unittest.TestCase):
 
         name = df2.groupby('Names')
         print(type(name), name)
+        print(str(name))
+        print(name.sum())
+
+        Sorted = df.sort_values(['Births'], ascending=False)
+        Sorted.head()
+
+        maxValueOfBirths = df['Births'].max()
+
+        a = df['Births'].plot.bar()
+        print(type(a))
+        print(dir(a))
+        print("The most popular name")
+        df.sort_values(by='Births', ascending=False)
+
 
 
 if __name__ == '__main__':

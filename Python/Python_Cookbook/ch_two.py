@@ -33,11 +33,29 @@ class TestChTwo(unittest.TestCase):
         print(fs)
 
     # 2.3 用 Shell 通配符匹配字符串
-    def test_2_3(self):
+    def n_test_2_3(self):
         from fnmatch import fnmatch, fnmatchcase
 
         names = ['Dat1.csv', 'Dat2.csv', 'config.ini', 'foo.py']
 
         print([name for name in names if fnmatch(name, '*csv')])
+    
+    # 2.5 字符串搜索和替换
+    def test_2_5(self):
+        text1 = 'yeah, but no, but yeah, but no, but yeah'
+        text1 = text1.replace('yeah', 'yes')
+        print(text1)
+
+        import re
+        text2 = 'Today is 11/27/2012. PyCon starts 3/13/2013.'
+        #text2 = re.sub(r'(\d+)/(\d+)/(\d+)', '\3-\1-\2', text2)
+        # 匹配模式不加 r'' 会导致乱码
+        text3 = re.sub(r'(\d+)/(\d+)/(\d+)', r'\3-\1-\2', text2)
+        print(text3)
+
+        datapat = re.compile(r'(\d+)/(\d+)/(\d+)')
+        text4 = datapat.sub(r'\3-\1-\2', text2)
+        print(text4)
+
 
         
