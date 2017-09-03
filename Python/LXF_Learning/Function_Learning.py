@@ -213,6 +213,7 @@ def test_sorted():
     L_byScore = sorted(L, key=by_score, reverse=True)
     print(L_byScore)
 
+def test
 
 if __name__ == "__main__":
     test_sorted()

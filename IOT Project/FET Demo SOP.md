@@ -59,3 +59,8 @@ d. 裝置接網設置:
 
 ### 4.1 FET Cloud 故障
 
+
+
+## 五. AI 開關
+
+select * from sa_db_dictitem where dictid = 'TulingBot' and groupid = 'BOT'
