@@ -76,14 +76,14 @@ class audio2text:
                     chunk = inf.read(1000)
                     if not chunk:
                         break
-
+                    print(chunk)
+                    print("-"*80)
                     result  = self.aipSpeech.synthesis(chunk, 'zh', 1, {'vol': 5,})
                     if not isinstance(result, dict):
                         outf.write(result)
+                        print("output mp3")
                     else:
                         print("return error" + str(result))
-                    if not chunk:
-                        break
         
     def trans(self, infile, outfile):
         self._init(infile, outfile)

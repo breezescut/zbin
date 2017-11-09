@@ -50,7 +50,6 @@ x64/
 build/
 [Bb]in/
 [Oo]bj/
-
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
@@ -461,4 +460,15 @@ yUML
 Robot
 out
 .vs
->>>>>>> 9c601411de8b8a110c0a245fdcd8546b53702ea1
+
+# 杂项文件
+Python/OtherProject/calc/output/*
+.ipynb_checkpoints/Untitled-checkpoint.ipynb
+Python/Amy_Python/simple_calc.html
+Python/Django_Hello/*
+Python/OtherProject/text2audio/123.mp3
+Python/OtherProject/text2audio/123.txt
+Python/OtherProject/text2audio/12345.mp3
+Python/OtherProject/video/data/*
+Python/量化交易/Untitled.ipynb
+Python/量化交易/.ipynb_checkpoints/Untitled-checkpoint.ipynb
