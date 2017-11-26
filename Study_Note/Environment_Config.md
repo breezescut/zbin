@@ -35,6 +35,7 @@
 - Ubuntu 上没有安装 Anaconda, 直接用 apt-get 安装了 python3 和 Python(默认2.x) 两种版本
 - conda install pyserial, pyserial 用于串口编程, import serial 启用
 - 为 TensorFlow 新建了一个 "name=tensorflow, python=3.6" 的conda env, 但源中的tensorflow要求 python3.5, env 要重新构建(已清理)
+- 重新用 Python3.5 安装了Tensorflow, 使用conda 激活即可使用.
 
 ### [Anaconda 教程](http://www.jianshu.com/p/2f3be7781451)
 - 国内镜像配置
@@ -61,3 +62,6 @@
   * 更新 Anaconda: conda update anaconda
   * 更新 python: conda update python
   * 安装 anaconda : conda install anaconda
+
+## Ubuntu On Windows 10
+### [MySQL 安装](http://bit.ly/2rijXI0)
