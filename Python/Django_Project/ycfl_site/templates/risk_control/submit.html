@@ -5,6 +5,8 @@
     <title>Submit</title>
 </head>
 <body>
-{{ submit_context }}
+    {% for ix in submit_list %}
+        <li>{{ ix }}</li>
+    {% endfor %}
 </body>
 </html>

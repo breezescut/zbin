@@ -69,13 +69,16 @@ def submit(request):
     for idx in mydata.get_index_list():
         idx_value = request.POST[idx] if request.POST[idx] else str(0.0)
         idx_value = idx_value + index_dict[idx][1]
-        istr = '|'.join([str(ser), index_dict[idx][0], month, idx_value ]) + '\r\n'
+        istr = '|'.join([str(ser), index_dict[idx][0], month, idx_value ]) + '\n'
         submit_context += istr
         ser += 1
-    context = {'submit_context': submit_context}
+    
     out_file = 'data/output/' + month + '.txt'
-    with open(out_file, 'w') as f:
+    with open(out_file, 'w', encoding='utf8') as f:
         f.write(submit_context)
+    
+    submit_list = submit_context.split('\n')
+    context = {'submit_list': submit_list}
 
     # ftp 到 指定服务器
     context['result'] = mftp(out_file)
