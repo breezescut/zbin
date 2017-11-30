@@ -4,7 +4,7 @@ import os
 import datetime
 from ftplib import FTP
 
-month = '' + str(datetime.datetime.now().year) + str(datetime.datetime.now().month) + str(datetime.datetime.now().day)
+month = '' + str(datetime.datetime.now().year) + str(datetime.datetime.now().month)
 
 class mdata():
 
@@ -67,16 +67,18 @@ def submit(request):
     submit_context = ''
     index_dict = mydata.get_index_dict()
     for idx in mydata.get_index_list():
-        idx_value = request.POST[idx] if request.POST[idx] else str(0.0)
+        idx_value = request.POST[idx] if request.POST[idx] else str(0.00)
         idx_value = idx_value + index_dict[idx][1]
-        istr = '|'.join([str(ser), index_dict[idx][0], month, idx_value ]) + '\r\n'
+        istr = '|'.join([str(ser), index_dict[idx][0], month, idx_value ]) + '\n'
         submit_context += istr
         ser += 1
-    context = {'submit_context': submit_context}
+    
     out_file = 'data/output/' + 'jz_riskj_' + month + '.txt'
-    with open(out_file, 'w', coding='utf8') as f:
+    with open(out_file, 'w', encoding='utf8') as f:
         f.write(submit_context)
 
+    
+    context = {'submit_context': submit_context.split(sep='\n')}
     # ftp 到 指定服务器
     context['result'] = mftp(out_file)
     return render(request, 'risk_control/submit.html', context=context)
@@ -89,6 +91,3 @@ def mftp(ffile):
         ftp.storbinary('STOR %s' % os.path.basename(ffile), file_handler, bufsize)
     ftp.quit()
     return 'File upload ok!'
-
-
-

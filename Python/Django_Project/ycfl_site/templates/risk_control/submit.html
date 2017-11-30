@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Submit</title>
+    <title>提交成功</title>
 </head>
 <body>
-{{ submit_context }}
+    {% for x in submit_context %}
+        <li>{{ x }}</li>
+    {% endfor %}
 </body>
 </html>
