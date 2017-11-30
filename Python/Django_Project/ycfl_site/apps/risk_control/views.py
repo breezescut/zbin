@@ -73,8 +73,8 @@ def submit(request):
         submit_context += istr
         ser += 1
     context = {'submit_context': submit_context}
-    out_file = 'data/output/' + month + '.txt'
-    with open(out_file, 'w') as f:
+    out_file = 'data/output/' + 'jz_riskj_' + month + '.txt'
+    with open(out_file, 'w', coding='utf8') as f:
         f.write(submit_context)
 
     # ftp 到 指定服务器
@@ -84,7 +84,6 @@ def submit(request):
 def mftp(ffile):
     ftp = FTP('100.100.0.80')
     ftp.login('ftpuser', 'ftpuser')
-    ftp.cwd('')
     bufsize = 1024
     with open(ffile, 'rb') as file_handler:
         ftp.storbinary('STOR %s' % os.path.basename(ffile), file_handler, bufsize)
