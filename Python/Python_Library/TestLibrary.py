@@ -10,8 +10,10 @@ class TestLibrary(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_setattr(self):
-        # 利用 setAttr 可以动态增加对象的属性
+    def n_test_setattr(self):
+        '''
+         利用 setAttr 可以动态增加对象的属性
+        '''
         class A():
             a = 1
             b = 1
@@ -28,6 +30,20 @@ class TestLibrary(unittest.TestCase):
         print(dd1)
         setattr(DD, 'e', 5)
         print(dd1.e)
+    
+    def test_list(self):
+        fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
 
+        self.assertEqual(fruits.index('apple'), 1)
+        self.assertEqual(fruits.count('apple'), 2)
+
+        self.assertEqual(fruits.pop(2), 'pear')
+
+        temp = sorted(fruits)
+        fruits.sort()
+        self.assertEqual(fruits, temp)
+
+if __name__ == '__main__':
+    unittest.main()
 
 

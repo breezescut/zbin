@@ -11,27 +11,49 @@ class TestTreeOne(unittest.TestCase):
         mtree = MyTree()
         for i in lt:
             root = mtree.get_root()
-            # mtree.set_root(mtree.insert(root, i))
-            # print("start insert")
-            newRoot = mtree.insert(root, i)
-            # print("end insert")
-            # print("newRoot:{}".format(newRoot.get_val()))
+            newRoot = mtree.insert3(root, i)
             if root is None: mtree.set_root(newRoot)
             root2 = mtree.get_root()
-            # print("root2:{}".format(root2.get_val()))
-            # print("root2:{}".format(id(root2)))
-            # print("\n"*2)
         
         pre_list = []
         mtree.pre_order(mtree.get_root(), pre_list)
-        print(pre_list)
-        post_list = []
+        pre_list2 = []
+        mtree.pre_order_norec(mtree.get_root(), pre_list2)
+        print('pre_order:', pre_list, pre_list2)
+        for i in range(len(pre_list)):
+            self.assertEqual(pre_list[i], pre_list2[i])
+
+        post_list, post_list2 = [], []
         mtree.post_order(mtree.get_root(), post_list)
-        print(post_list)
-        inner_list = []
+        mtree.post_order_norec(mtree.get_root(), post_list2)
+        print('post_order:', post_list, post_list2)
+
+        inner_list, inner_list2 = [], []
         mtree.inner_order(mtree.get_root(), inner_list)
-        print(inner_list)
-    
+        mtree.inner_order_norec(mtree.get_root(), inner_list2)
+        print('innner_order:', inner_list, inner_list2)
+
+        level_list = []
+        mtree.level_order(mtree.get_root(), level_list)
+        print('level_list:', level_list)
+
+        level_list2 = []
+        mtree.level_order2(mtree.get_root(), level_list2)
+        print('level_list2:', level_list2)
+        # for i in level_list2:
+        #     print(i, end=' ')
+        
+        spre_lt = []
+        mtree.serialize_pre_order(mtree.get_root(), spre_lt)
+        print('serialize_pre:', spre_lt)
+
+        xmin = mtree.find_min()
+        print("min:", xmin)
+        xmax = mtree.find_max()
+        print('max:', xmax)
+
+        print('mtree height:', mtree.find_height(mtree.get_root()))
+        
 
 if __name__ == '__main__':
     unittest.main()

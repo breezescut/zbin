@@ -460,6 +460,10 @@ yUML
 Robot
 out
 .vs
+*.exe
+Java/*
+*.jar
+
 
 # 杂项文件
 Python/OtherProject/calc/output/*
@@ -472,3 +476,5 @@ Python/OtherProject/text2audio/12345.mp3
 Python/OtherProject/video/data/*
 Python/量化交易/Untitled.ipynb
 Python/量化交易/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+.idea
+
