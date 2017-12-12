@@ -4,7 +4,9 @@ import os
 import datetime
 from ftplib import FTP
 
-month = '' + str(datetime.datetime.now().year) + str(datetime.datetime.now().month) + str(datetime.datetime.now().day)
+now = datetime.datetime.now()
+
+month = (now - datetime.timedelta(days=now.day)).strftime("%Y%m")
 
 class mdata():
 
@@ -21,20 +23,20 @@ class mdata():
             'provision_rate': ['拨备率', '%'],
             'reject_ratio': ['不良率', '%'],
             'recovery_rate': ['不良资产处置回收率', '%'],
-            'vendor_leasing': ['厂商租赁业务', '元'],
+            'vendor_leasing': ['厂商租赁业务', '万元'],
             'single_holder_cor': ['单一股东关联度', '%'],
             'single_group_cen': ['单一集团客户集中度', '%'],
             'single_customer_cor': ['单一客户关联度', '%'],
             'single_customer_cen': ['单一客户集中度', '%'],
-            'aum': ['管理资产规模', '元'],
+            'aum': ['管理资产规模', '万元'],
             'rate_risk': ['利率风险', '%'],
             'liq_ratio': ['流动比率', '%'],
             'total_cor': ['全部关联度', '%'],
-            'after_sale_rent': ['售后回租业务', '元'],
+            'after_sale_rent': ['售后回租业务', '万元'],
             'loss_ratio': ['损失率', '%'],
             'interbank_ratio': ['同业拆借比例', '%'],
             'overdue_rate': ['逾期率', '%'],
-            'direct_rental': ['直租业务', '元'],
+            'direct_rental': ['直租业务', '万元'],
             'capital_adequacy_ratio': ['资本充足率', '%'],
             'income_growth_rate': ['收入增长率', '%'],
             'profit_increase_rate': ['利润增长率', '%'],
@@ -73,15 +75,15 @@ def submit(request):
         submit_context += istr
         ser += 1
     
-    out_file = 'data/output/' + month + '.txt'
+    out_file = 'data/output/' + 'jz_riskj_' + month + '.txt'
     with open(out_file, 'w', encoding='utf8') as f:
         f.write(submit_context)
     
     submit_list = submit_context.split('\n')
-    context = {'submit_list': submit_list}
+    context = {'submit_context': submit_list}
 
     # ftp 到 指定服务器
-    #context['result'] = mftp(out_file)
+    # context['result'] = mftp(out_file)
     return render(request, 'risk_control/submit.html', context=context)
 
 def mftp(ffile):
