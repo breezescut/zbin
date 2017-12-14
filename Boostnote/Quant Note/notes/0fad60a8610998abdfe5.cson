@@ -1,0 +1,20 @@
+type: "SNIPPET_NOTE"
+folder: "965c2f3ec54ec56c9f54"
+title: ""
+description: ""
+snippets: [
+  {
+    name: ""
+    mode: "text"
+    content: '''
+      ```
+      import
+      ```
+    '''
+  }
+]
+tags: []
+isStarred: false
+isTrashed: true
+createdAt: "2017-12-14T02:44:03.659Z"
+updatedAt: "2017-12-14T02:44:34.848Z"

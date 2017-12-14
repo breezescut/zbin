@@ -1,0 +1,22 @@
+type: "MARKDOWN_NOTE"
+folder: "965c2f3ec54ec56c9f54"
+title: "Q & A"
+content: '''
+  # Q & A
+  
+  - 怎样根据股票名字获取股票信息？
+  ```python
+  from jaqs.data.dataapi import DataApi
+  
+  # 查询
+  
+  ```
+  
+  - 
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-12-14T02:41:34.012Z"
+updatedAt: "2017-12-14T05:45:00.790Z"
