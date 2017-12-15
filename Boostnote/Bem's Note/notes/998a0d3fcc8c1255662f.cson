@@ -1,0 +1,36 @@
+type: "MARKDOWN_NOTE"
+folder: "f70239a7f39d8eb21556"
+title: "| Tables        | Are           | Cool  |"
+content: '''
+  | Tables        | Are           | Cool  |
+  | ------------- |:-------------:| -----:|
+  | col 3 is      | right-aligned | $1600 |
+  | col 2 is      | centered      |   $12 |
+  | zebra stripes | are neat      |    $1 |
+  | zebra stripes | are neat      |    $1 |
+  
+  作者：简书
+  链接：http://www.jianshu.com/p/q81RER
+  來源：简书
+  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+  ```python
+  int main(){
+  	for(int i =0 ; i++; i<10){
+      	printf('ddjk')
+    	}
+  }
+  
+  ```
+  
+  ```python
+  import tushare as ts
+  
+  df = ts.get_hist_data(code='')
+  
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: true
+createdAt: "2017-12-15T07:46:35.038Z"
+updatedAt: "2017-12-15T07:50:12.083Z"

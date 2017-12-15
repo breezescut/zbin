@@ -1,0 +1,36 @@
+type: "MARKDOWN_NOTE"
+folder: "f70239a7f39d8eb21556"
+title: "@startuml"
+content: '''
+  @startuml
+  skinparam monochrome true
+  skinparam backgroundColor #F0EBDC
+  skinparam handwritten true
+  participant "xxx" as robot
+  
+  box "PaaS Service" #LightBlue
+  	participant EHub
+  	participant Adapter
+  	participant "Cognitive Service" as cs
+  end box
+  
+  
+  robot-> robot: Ai-Key）
+  robot-> EHub: Tcp 
+  EHub-> Adapter: MQ
+  Adapter-> cs: Dubbo:
+  cs-> cs: gg
+  cs-> cs: gg
+  cs--> Adapter: g
+  Adapter-> EHub: g
+  EHub-> robot: g
+  robot-> robot: g
+  
+  
+  @enduml
+'''
+tags: []
+isStarred: false
+isTrashed: true
+createdAt: "2017-12-15T07:59:14.450Z"
+updatedAt: "2017-12-15T08:17:59.458Z"

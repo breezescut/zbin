@@ -4,6 +4,16 @@
       "key": "1f0ac33872368efb4f31",
       "color": "#B013A4",
       "name": "Daily Note"
+    },
+    {
+      "key": "f70239a7f39d8eb21556",
+      "color": "#B013A4",
+      "name": "Work Note"
+    },
+    {
+      "key": "f5edc18a90cdbf630991",
+      "color": "#3FD941",
+      "name": "Schedule Note"
     }
   ],
   "version": "1.0"
