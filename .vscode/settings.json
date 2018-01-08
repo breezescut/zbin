@@ -1,4 +1,4 @@
 {
     "python.formatting.provider": "autopep8",
-    "python.pythonPath": "D:\\ProgramData\\Anaconda3\\envs\\Django\\python.exe"
+    "python.pythonPath": "d:\\ProgramData\\Anaconda3\\python.exe"
 }
