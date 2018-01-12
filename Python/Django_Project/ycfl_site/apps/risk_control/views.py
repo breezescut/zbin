@@ -83,7 +83,7 @@ def submit(request):
     context = {'submit_context': submit_list}
 
     # ftp 到 指定服务器
-    # context['result'] = mftp(out_file)
+    context['result'] = mftp(out_file)
     return render(request, 'risk_control/submit.html', context=context)
 
 def mftp(ffile):
