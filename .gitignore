@@ -483,3 +483,4 @@ tk.csv
 Python/output/*
 .ipython/*
 .viminfo
+Python/Spider/data/*
