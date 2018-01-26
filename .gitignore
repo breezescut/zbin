@@ -484,3 +484,5 @@ Python/output/*
 .ipython/*
 .viminfo
 Python/Spider/data/*
+Python/Spider/comic/data/*
+Python/量化交易/July/data/*
