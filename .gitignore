@@ -483,3 +483,6 @@ tk.csv
 Python/output/*
 .ipython/*
 .viminfo
+
+Python/Spider2/*
+.vscode/settings.json
