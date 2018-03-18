@@ -483,6 +483,12 @@ tk.csv
 Python/output/*
 .ipython/*
 .viminfo
+<<<<<<< HEAD
 
 Python/Spider2/*
 .vscode/settings.json
+=======
+Python/Spider/data/*
+Python/Spider/comic/data/*
+Python/量化交易/July/data/*
+>>>>>>> bd695f31f45c932efe635a9078f0df847e262ff4
