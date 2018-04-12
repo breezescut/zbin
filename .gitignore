@@ -487,8 +487,35 @@ Python/output/*
 
 Python/Spider2/*
 .vscode/settings.json
-=======
 Python/Spider/data/*
 Python/Spider/comic/data/*
 Python/量化交易/July/data/*
->>>>>>> bd695f31f45c932efe635a9078f0df847e262ff4
+.jupyter/migrated
+.ssh/known_hosts
+BemNote/WorkNote/Untitled.ipynb
+BemNote/WorkNote/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+BemNote/WorkNote/pic/1.jpg
+BemNote/WorkNote/pic/2.png
+BemNote/WorkNote/pic/3.png
+BemNote/WorkNote/pic/4.png
+BemNote/WorkNote/pic/5.png
+BemNote/WorkNote/pic/6.png
+Python/OtherProject/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+Python/OtherProject/.ipynb_checkpoints/pudb_test-checkpoint.ipynb
+Python/UW_Machine_Learing/Getting started with iPython Notebook.ipynb
+Python/UW_Machine_Learing/.ipynb_checkpoints/Getting started with iPython Notebook-checkpoint.ipynb
+Python/UW_Machine_Learing/UW_ML_Course1/Python_Machine_Learning_By_Example.rar
+Python/UW_Machine_Learing/UW_ML_Course1/UW_ML_C1_W2/Predicting house prices.ipynb
+Python/UW_Machine_Learing/UW_ML_Course1/UW_ML_C1_W2/.ipynb_checkpoints/UW_ML_C1_W2_Note-checkpoint.ipynb
+Python/UW_Machine_Learing/UW_ML_Course1/UW_ML_C1_W2/.ipynb_checkpoints/UW_ML_C1_W3_Note-checkpoint.ipynb
+Python/UW_Machine_Learing/UW_ML_Course1/UW_ML_C1_W2/home_data.gl/dir_archive.ini
+Python/UW_Machine_Learing/UW_ML_Course1/UW_ML_C1_W2/home_data.gl/m_a503e2e46f3fb896.0000
+Python/UW_Machine_Learing/UW_ML_Course1/UW_ML_C1_W2/home_data.gl/m_a503e2e46f3fb896.frame_idx
+Python/UW_Machine_Learing/UW_ML_Course1/UW_ML_C1_W2/home_data.gl/m_a503e2e46f3fb896.sidx
+Python/UW_Machine_Learing/UW_ML_Course1/UW_ML_C1_W2/home_data.gl/objects.bin
+Python/UW_Machine_Learing/data/song_data.csv
+Python/python 101/Untitled.ipynb
+Python/python 101/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+Python/UW_Machine_Learing/UW_ML_Course1/Python_Machine_Learning_By_Example/Python Machine Learning By Example.azw3
+Python/UW_Machine_Learing/UW_ML_Course1/UW_ML_C1_W2/home_data.csv
+Python/UW_Machine_Learing/UW_ML_Course1/UW_ML_C1_W2/home_data.gl.zip
