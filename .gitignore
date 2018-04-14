@@ -483,12 +483,18 @@ tk.csv
 Python/output/*
 .ipython/*
 .viminfo
-<<<<<<< HEAD
+
 
 Python/Spider2/*
 .vscode/settings.json
-=======
 Python/Spider/data/*
 Python/Spider/comic/data/*
 Python/量化交易/July/data/*
->>>>>>> bd695f31f45c932efe635a9078f0df847e262ff4
+
+Python/UW_Machine_Learing/UW_W2/home_data.gl.zip
+Python/UW_Machine_Learing/.ipynb_checkpoints/GraphLab -- Getting Started-checkpoint.ipynb
+Python/UW_Machine_Learing/.ipynb_checkpoints/GraphLab -- Getting Started-checkpoint.ipynb
+Python/UW_Machine_Learing/.ipynb_checkpoints/Getting started with iPython Notebook-checkpoint.ipynb
+Python/UW_Machine_Learing/.ipynb_checkpoints/GraphLab -- Getting Started-checkpoint.ipynb
+
+Python/UW_Machine_Learing/UW_W2/cc.csv
