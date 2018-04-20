@@ -483,13 +483,23 @@ tk.csv
 Python/output/*
 .ipython/*
 .viminfo
-<<<<<<< HEAD
+
 
 Python/Spider2/*
 .vscode/settings.json
 Python/Spider/data/*
 Python/Spider/comic/data/*
 Python/量化交易/July/data/*
+<<<<<<< HEAD
+
+Python/UW_Machine_Learing/UW_W2/home_data.gl.zip
+Python/UW_Machine_Learing/.ipynb_checkpoints/GraphLab -- Getting Started-checkpoint.ipynb
+Python/UW_Machine_Learing/.ipynb_checkpoints/GraphLab -- Getting Started-checkpoint.ipynb
+Python/UW_Machine_Learing/.ipynb_checkpoints/Getting started with iPython Notebook-checkpoint.ipynb
+Python/UW_Machine_Learing/.ipynb_checkpoints/GraphLab -- Getting Started-checkpoint.ipynb
+
+Python/UW_Machine_Learing/UW_W2/cc.csv
+=======
 .jupyter/migrated
 .ssh/known_hosts
 BemNote/WorkNote/Untitled.ipynb
@@ -527,3 +537,4 @@ Python/UW_Machine_Learing/sciki-learn/.ipynb_checkpoints/sklearn_for_linear_regr
 Python/UW_Machine_Learing/sciki-learn/.ipynb_checkpoints/plot_ols-checkpoint.ipynb
 Python/UW_Machine_Learing/sciki-learn/.ipynb_checkpoints/Untitled-checkpoint.ipynb
 Python/Python_Cookbook/.ipynb_checkpoints/Python 技巧-checkpoint.ipynb
+>>>>>>> 56414cec53a2c24ef4785a70a9cf9d18536c60c2
