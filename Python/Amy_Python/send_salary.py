@@ -63,7 +63,7 @@ def send_mail(server, from_addr, to_addr, to_name, xmsg):
     msg['From'] = _format_addr('李晓英<%s>' % from_addr)
     msg['To'] = _format_addr('%s<%s>' % (to_name, to_addr))
     msg['Subject'] = Header('你的工资条', 'utf-8').encode()
-    server.sendmail(from_addr, to_addr, msg.as_string())
+    # server.sendmail(from_addr, to_addr, msg.as_string())
 
 def get_cell_value(xvalue):
     new_value = str(xvalue).split(sep=':')[1]
