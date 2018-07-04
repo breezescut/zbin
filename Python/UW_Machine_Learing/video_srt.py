@@ -13,10 +13,10 @@ class xvideo(object):
     srt_file = ""
 
 
-generator = lambda txt: TextClip(txt, font='Georgia-Regular',
-                                fontsize=30, color='grey')
+xgenerator = lambda txt: TextClip(txt, font='Georgia-Regular',
+                                fontsize=30, color='black')
 
-outpath = r"E:\WorkHome\CodeHome\Python\UW_Machine_Learing\UW_ML_Course2\ml_regression_bilibili"
+outpath = r"D:\WorkHome\CodeHome\Python\UW_Machine_Learing\UW_ML_Course3\ml-classification_bilibili"
 
 # 将输入的视频和字幕进行合并压制
 def convert_video(srtfile, xgenerator, invideo, outvideo):
@@ -67,26 +67,56 @@ def get_srt_info(v_path):
 
     srt_zh = ""
     srt_en = ""
-    print(v_name)
-    for idx, it in enumerate(f_list[0][2]):
+    print(path_name, v_name)
+    print(f_list[0][2])
+    for it in f_list[0][2]:
+        print("srt check %s" % it)
         items = it.split(".")
         if items[-1] != "srt" or items[0] != v_name:
             continue
-        elif items[-2] == "zh-CN":
-            srt_zh = path_name + "\\" + it
+        # elif items[-2] == "zh-CN":
+        #     srt_zh = path_name + "\\" + it
         elif items[-2] == "en":
             srt_en = path_name + "\\" + it
-    if srt_zh != "":
-        return srt_zh
-    else:
-        return srt_en
+    # if srt_zh != "":
+    #     return srt_zh
+    # else:
+    return srt_en
 
 def video_proc():
-    xpath = ""
+    xpath = r"D:\WorkHome\CodeHome\Python\UW_Machine_Learing\UW_ML_Course3\ml-classification"
+    v_done = xpath + r"\v.done"
 
+    print("hello")
+    d_dict = dict() 
     xvideo_list = get_video_list(xpath)
-
+    print(xvideo_list)
+    vfd = open(v_done, 'r+')
+    for line in vfd.readlines():
+        line = line.strip()
+        d_dict[line] = 1
+        print("%s had been processed" % line)
     for xidx in xvideo_list:
+        v_name = xidx.split("\\")[-1]
+        print("get %s" % v_name)
+        if v_name in d_dict:
+            print("skip %s" % v_name)
+            continue
         srt_file = get_srt_info(xidx)
         xout = trans_filename(xidx)
+        print("start convert, srtfile[%s], input[%s], output[%s]" % (srt_file, xidx, xout))
         convert_video(srt_file, xgenerator, xidx, xout)
+        vfd.write(v_name + "\n")
+        vfd.flush()
+    vfd.close()
+
+def unit_test():
+    test_path = r"D:\WorkHome\CodeHome\Python\UW_Machine_Learing\UW_ML_Course3\ml-classification"
+    v_lst = get_video_list(test_path)
+
+    invideo = v_lst[0]
+
+    srtfile = get_srt_info(invideo)
+    outvideo = trans_filename(invideo)
+
+    convert_video(srtfile, xgenerator, invideo, outvideo)
